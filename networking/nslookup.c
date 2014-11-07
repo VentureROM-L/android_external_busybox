@@ -34,15 +34,9 @@
 #  include <netinet/in6.h>
 # endif
 # define ANDROID_CHANGES
-# ifdef BIONIC_L
 #  include <arpa/nameser.h>
 #  include <dns/include/resolv_private.h>
 #  include <dns/resolv/res_private.h>
-# else
-#  include <arpa_nameser.h>
-#  include <private/resolv_private.h>
-#  include <netbsd/resolv/res_private.h>
-# endif
 
 static struct __res_state res_st;
 struct __res_state * __res_state(void)
